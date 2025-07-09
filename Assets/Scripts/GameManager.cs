@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
             GameObject newFruit = Instantiate(GetNextFruit(a), midpoint, Quaternion.identity);
         }
 
+        ScoreManager.Instance.ScoreFruit(a);
         // Optional: play particles/sound
 
         Destroy(a.gameObject);
